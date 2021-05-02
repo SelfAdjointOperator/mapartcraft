@@ -64,7 +64,6 @@ class Root extends Component {
       this.setState({ localeCodeLoading: countryCode });
       fetch("./locale/" + countryCode + ".json")
         .then((response) => {
-          console.log(response);
           if (response.ok) {
             return response.json();
           }
