@@ -59,8 +59,7 @@ class Root extends Component {
     this.setState({ displayingCorruptedPresetWarning: true });
   };
 
-  componentDidMount() {
-    const countryCode = this.props.match.params.countryCode;
+  fetchAndSetLocaleIfExists(countryCode) {
     if (![undefined, "en"].includes(countryCode)) {
       this.setState({ localeCodeLoading: countryCode });
       fetch("./locale/" + countryCode + ".json")
@@ -79,6 +78,23 @@ class Root extends Component {
         .finally(() => {
           this.setState({ localeCodeLoading: null });
         });
+    } else {
+      this.setState({
+        localeStrings: locale_en,
+      });
+    }
+  }
+
+  componentDidMount() {
+    const countryCode = this.props.match.params.countryCode;
+    this.fetchAndSetLocaleIfExists(countryCode);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.match.params.countryCode !== this.props.match.params.countryCode
+    ) {
+      this.fetchAndSetLocaleIfExists(this.props.match.params.countryCode);
     }
   }
 
