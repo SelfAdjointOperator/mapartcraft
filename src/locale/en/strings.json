@@ -46,6 +46,14 @@
       "EVERYTHING": "Everything",
       "CARPETS": "Carpets",
       "GREYSCALE": "Greyscale"
+    },
+    "ADD-CUSTOM": {
+      "TITLE": "Add Custom",
+      "BLOCK-NAME": "Block Name",
+      "NEEDS-SUPPORT": "Needs Support",
+      "FLAMMABLE": "Flammable",
+      "VERSIONS": "Versions",
+      "COLOUR-SET": "Colour Set"
     }
   },
   "MAP-PREVIEW": {

@@ -10,6 +10,8 @@ import IMG_Barrier from "../../images/barrier.png";
 import IMG_Null from "../../images/null.png";
 import IMG_Textures from "../../images/textures.png";
 
+import BlockSelectionAddCustom from "./blockSelectionAddCustom/blockSelectionAddCustom";
+
 import "./blockSelection.css";
 
 class BlockSelection extends Component {
@@ -122,6 +124,7 @@ class BlockSelection extends Component {
             </div>
           ))}
         </div>
+        <BlockSelectionAddCustom getLocaleString={getLocaleString} />
       </div>
     );
   }

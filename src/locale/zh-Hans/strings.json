@@ -46,6 +46,14 @@
       "EVERYTHING": "全部东西",
       "CARPETS": "地毯",
       "GREYSCALE": null
+    },
+    "ADD-CUSTOM": {
+      "TITLE": null,
+      "BLOCK-NAME": null,
+      "NEEDS-SUPPORT": null,
+      "FLAMMABLE": null,
+      "VERSIONS": null,
+      "COLOUR-SET": null
     }
   },
   "MAP-PREVIEW": {
